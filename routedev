@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "$1" = "route" ] && [ "$2" = "add" ]; then
+ip route add $3 dev $dev
+exit $?
+fi
+
+if [ "$1" = "route" ] && [ "$2" = "del" ]; then
+ip route del $3 dev $dev
+exit $?
+fi
+
+ip $*
